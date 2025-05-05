@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            padding: 40px;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            margin: 8px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form method="post" action="/predict">
+        <input name="Pregnancies" placeholder="Pregnancies" required><br>
+        <input name="Glucose" placeholder="Glucose" required><br>
+        <input name="BloodPressure" placeholder="Blood Pressure" required><br>
+        <input name="SkinThickness" placeholder="Skin Thickness" required><br>
+        <input name="Insulin" placeholder="Insulin" required><br>
+        <input name="BMI" placeholder="BMI" required><br>
+        <input name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required><br>
+        <input name="Age" placeholder="Age" required><br>
+        <button type="submit">Predict</button>
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
